@@ -17,7 +17,7 @@ module.exports = {
         const time = new Date()
         const checkOut = time.toLocaleDateString() + " " + time.toLocaleTimeString();
 
-        const numday = Math.round(time.getTime()/(24*60*60000)) - Math.round(roomReceipt.dateOfCheckIn.getTime() /(24*60*60000)) 
+        const numday = Math.ceil(time.getTime()/(24*60*60000)) - Math.floor(roomReceipt.dateOfCheckIn.getTime() /(24*60*60000)) 
 
         const room = {id: req.params.id, name: roomReceipt.roomID, type: roomType.name, price: roomType.price, checkin: checkIn, checkout: checkOut, numday: numday, subtotal: numday * roomType.price};
         var service = [];
