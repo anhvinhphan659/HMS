@@ -4,7 +4,6 @@ const Notification = require("../models/notification/notification.model");
 const serviceService = require("../services/service/service.service");
 const serviceTypeService = require("../services/service/serviceType.service");
 const env = require("dotenv").config();
-const { all } = require("../routes/bill.route");
 
 class ServiceController {
     //[GET] /services/
