@@ -41,7 +41,7 @@ inputCheckIn.setAttribute('min', getCurrentDay())
 inputCheckIn.addEventListener('change', e => {
     inputCheckOut.value = ''
     const minCheckoutDate = nextDayDate(e.target.value)
-    inputCheckOut.setAttribute('min', minCheckoutDate)
+    inputCheckOut.setAttribute('min', e.target.value)
 })
 
 inputCheckOut.addEventListener('change', e => {
